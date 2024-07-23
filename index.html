@@ -3,130 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יועץ משכנתאות מומחה | שירות אישי ומקצועי</title>
+    <title>Advice - ייעוץ משכנתאות | מאיר כץ</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: linear-gradient(135deg, #1e5799 0%,#2989d8 50%,#207cca 100%);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-        section {
-            background: white;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #1e5799;
-            border-bottom: 2px solid #1e5799;
-            padding-bottom: 0.5rem;
-        }
-        ul {
-            padding-right: 1.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input, button {
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #1e5799;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #2989d8;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-        }
-        @media (max-width: 600px) {
-            header {
-                padding: 1rem 0;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-        }
+        /* ... (השאר את כל ה-CSS הקודם כפי שהוא) ... */
     </style>
 </head>
 <body>
     <header>
-        <h1>יועץ משכנתאות מומחה</h1>
-        <p>ליווי אישי לקבלת המשכנתא המשתלמת ביותר עבורכם</p>
+        <h1>Advice - ייעוץ משכנתאות</h1>
+        <p>מאיר כץ - יועץ משכנתאות מומחה</p>
     </header>
 
     <main>
-        <section id="about">
-            <h2>מי אנחנו?</h2>
-            <p>אנו צוות מומחים בעלי ניסיון רב בתחום המשכנתאות, מחויבים לעזור לכם להשיג את התנאים הטובים ביותר.</p>
-        </section>
-
-        <section id="services">
-            <h2>השירותים שלנו</h2>
-            <ul>
-                <li>ייעוץ משכנתא מקיף</li>
-                <li>בחינת אפשרויות מימון</li>
-                <li>ליווי בתהליך קבלת המשכנתא</li>
-                <li>מחזור משכנתאות קיימות</li>
-            </ul>
-        </section>
-
-        <section id="why-us">
-            <h2>למה לבחור בנו?</h2>
-            <ul>
-                <li>ניסיון של למעלה מ-10 שנים בשוק</li>
-                <li>חיסכון של אלפי שקלים ללקוחותינו</li>
-                <li>שירות אישי ומותאם לצרכים שלכם</li>
-                <li>זמינות גבוהה ומענה מהיר</li>
-            </ul>
-        </section>
+        <!-- ... (השאר את כל החלקים הקודמים כפי שהם) ... -->
 
         <section id="contact">
             <h2>צרו קשר עוד היום</h2>
-            <form>
-                <input type="text" placeholder="שם מלא" required>
-                <input type="tel" placeholder="טלפון" required>
-                <input type="email" placeholder="אימייל" required>
+            <form id="contactForm">
+                <input type="text" id="fullName" placeholder="שם מלא" required>
+                <input type="tel" id="phone" placeholder="טלפון" required>
+                <input type="email" id="email" placeholder="אימייל" required>
                 <button type="submit">שלחו ונחזור אליכם בהקדם</button>
             </form>
+            <div id="formStatus"></div>
+            <a href="https://wa.me/972547402460" class="whatsapp-button">שלחו הודעת וואטסאפ למאיר</a>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 כל הזכויות שמורות ליועץ המשכנתאות המומחה</p>
+        <p>© 2024 כל הזכויות שמורות ל-Advice | מאיר כץ - יועץ משכנתאות</p>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var fullName = document.getElementById('fullName').value;
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+
+            // כאן היינו שולחים את הנתונים לשרת
+            // במקום זאת, נדמה שליחה מוצלחת
+            
+            // יצירת קישור למייל
+            var mailtoLink = `mailto:402460@gmail.com?subject=פנייה חדשה מ-${fullName}&body=שם: ${fullName}%0D%0Aטלפון: ${phone}%0D%0Aאימייל: ${email}`;
+            
+            // פתיחת חלון חדש עם קישור המייל
+            window.open(mailtoLink, '_blank');
+
+            // הצגת הודעת אישור למשתמש
+            document.getElementById('formStatus').innerHTML = 'תודה על פנייתך! נחזור אליך בהקדם.';
+            
+            // איפוס הטופס
+            this.reset();
+        });
+    </script>
 </body>
 </html>
