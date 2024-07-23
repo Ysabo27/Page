@@ -145,27 +145,6 @@
     <footer>
         <p>© 2024 כל הזכויות שמורות ל-Advice | מאיר כץ - יועץ משכנתאות</p>
     </footer>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            var fullName = document.getElementById('fullName').value;
-            var phone = document.getElementById('phone').value;
-            var email = document.getElementById('email').value;
-
-            var mailtoLink = `mailto:402460@gmail.com?subject=פנייה חדשה מ-${fullName}&body=שם: ${fullName}%0D%0Aטלפון: ${phone}%0D%0Aאימייל: ${email}`;
-            
-            window.open(mailtoLink, '_blank');
-
-            document.getElementById('formStatus').innerHTML = 'תודה על פנייתך! נחזור אליך בהקדם.';
-            document.getElementById('formStatus').style.backgroundColor = '#d4edda';
-            document.getElementById('formStatus').style.color = '#155724';
-            document.getElementById('formStatus').style.border = '1px solid #c3e6cb';
-            
-            this.reset();
-        });
-    </script>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8gJ0dJbUEkpRIo0OW7edQtcApXxcPtbwbbCHT8usbS9Tjew/viewform?embedded=true" width="640" height="915" frameborder="0" marginheight="0" marginwidth="0">בטעינה…</iframe>
 </body>
 </html>
