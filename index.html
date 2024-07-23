@@ -5,7 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advice - ייעוץ משכנתאות | מאיר כץ</title>
     <style>
-        /* ... (השאר את כל ה-CSS הקודם כפי שהוא) ... */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: linear-gradient(135deg, #1e5799 0%,#2989d8 50%,#207cca 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1e5799;
+            border-bottom: 2px solid #1e5799;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            padding-right: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, button {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #1e5799;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2989d8;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        #formStatus {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            header {
+                padding: 1rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -15,7 +104,30 @@
     </header>
 
     <main>
-        <!-- ... (השאר את כל החלקים הקודמים כפי שהם) ... -->
+        <section id="about">
+            <h2>מי אנחנו?</h2>
+            <p>ב-Advice, מאיר כץ וצוות המומחים שלנו מחויבים לעזור לכם להשיג את תנאי המשכנתא הטובים ביותר. עם ניסיון רב בתחום, אנו מספקים ייעוץ אישי ומקצועי.</p>
+        </section>
+
+        <section id="services">
+            <h2>השירותים שלנו</h2>
+            <ul>
+                <li>ייעוץ משכנתא מקיף</li>
+                <li>בחינת אפשרויות מימון</li>
+                <li>ליווי בתהליך קבלת המשכנתא</li>
+                <li>מחזור משכנתאות קיימות</li>
+            </ul>
+        </section>
+
+        <section id="why-us">
+            <h2>למה לבחור ב-Advice?</h2>
+            <ul>
+                <li>ניסיון עשיר של מאיר כץ בשוק המשכנתאות</li>
+                <li>חיסכון של אלפי שקלים ללקוחותינו</li>
+                <li>שירות אישי ומותאם לצרכים שלכם</li>
+                <li>זמינות גבוהה ומענה מהיר</li>
+            </ul>
+        </section>
 
         <section id="contact">
             <h2>צרו קשר עוד היום</h2>
@@ -42,19 +154,15 @@
             var phone = document.getElementById('phone').value;
             var email = document.getElementById('email').value;
 
-            // כאן היינו שולחים את הנתונים לשרת
-            // במקום זאת, נדמה שליחה מוצלחת
-            
-            // יצירת קישור למייל
             var mailtoLink = `mailto:402460@gmail.com?subject=פנייה חדשה מ-${fullName}&body=שם: ${fullName}%0D%0Aטלפון: ${phone}%0D%0Aאימייל: ${email}`;
             
-            // פתיחת חלון חדש עם קישור המייל
             window.open(mailtoLink, '_blank');
 
-            // הצגת הודעת אישור למשתמש
             document.getElementById('formStatus').innerHTML = 'תודה על פנייתך! נחזור אליך בהקדם.';
+            document.getElementById('formStatus').style.backgroundColor = '#d4edda';
+            document.getElementById('formStatus').style.color = '#155724';
+            document.getElementById('formStatus').style.border = '1px solid #c3e6cb';
             
-            // איפוס הטופס
             this.reset();
         });
     </script>
